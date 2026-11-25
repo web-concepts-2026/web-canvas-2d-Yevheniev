@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Canvas Drawing</h1>
+
+    <main class="drawing-app">
+        <aside class="tools">
+            <button id="draw-button" type="button">D - Draw</button>
+            <button id="erase-button" type="button">E - Erase</button>
+            <button id="undo-button" type="button">↺ - Undo</button>
+            <button id="clear-button" type="button">C - Clear</button>
+            <button id="stamp-button" type="button">★ - Stamp</button>
+        </aside>
+
+        <div class="workspace">
+            <div class="settings">
+                <label for="brush-size">Brush size:</label>
+                <input
+                    id="brush-size"
+                    type="range"
+                    min="1"
+                    max="50"
+                    value="5"
+                >
+                <span id="size-value">5</span>
+
+                <label for="brush-color">Color:</label>
+                <input id="brush-color" type="color" value="#000000">
+            </div>
+
+            <canvas id="canvas" width="800" height="500">
+                Your browser does not support Canvas.
+            </canvas>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
